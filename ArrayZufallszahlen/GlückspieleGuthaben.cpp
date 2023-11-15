@@ -213,8 +213,6 @@ vector<RangL> initializeLotto() {
     for (int rangl = eins; rangl <= neunzehn; ++rangl) {
         Lotto.push_back(static_cast<RangL>(rangl));
     }
-
-    
     random_device lo;
     mt19937 g(lo());
     shuffle(Lotto.begin(), Lotto.end(), g);
@@ -226,8 +224,7 @@ vector<RangL> initializeLotto() {
 
 
 
-void Spiel3() {         
-    cout << "\n\n\n";
+void Spiel3() {
     cout << "----------------------------------------------------------\n";
     cout << "MITARBEITERGLÜCKSSPIEL DER COMPUTER GMBH - LOTTO 6 AUS 19\n";
     cout << "----------------------------------------------------------\n";
@@ -486,9 +483,16 @@ void Spiel4() {
     int dhandValue = dresult.first;
     string dcardsString = dresult.second;
 
-
     cout << "Ihre Karten: " << cardsString << "\n";
     cout << "Ihre Karten haben den Wert: " << handValue << "\n\n";
+
+
+
+
+
+
+
+
 
     int Draw;
     cout << "Möchten Sie noch eine Karte ziehen? Ja[1] Nein[2]\n";
