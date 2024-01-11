@@ -11,16 +11,17 @@ void Aufgabe10(double Nettopreis, string Leistungsart);
 int main() {
     //Set output zu 2 Nachkommastellen
     cout << fixed << setprecision(2);
-    int Aufgabe = 0, again1 = 1;
-    while (Aufgabe != 8 && (Aufgabe != 9) && (Aufgabe != 10)) {
-    cout << "Welche Aufgabe soll ausgewählt werden? (8, 9 oder 10)\n";
-    cin >> Aufgabe;
-    }
+    double Aufgabe = 0, again1 = 1;
+
     //Welche Aufgabe Soll es sein?
     while (again1 == 1) {
+        while (Aufgabe != 8 && (Aufgabe != 9) && (Aufgabe != 10)) {
+            cout << "Welche Aufgabe soll ausgewählt werden? (8, 9 oder 10)\n";
+            cin >> Aufgabe;
+        }
         if (Aufgabe == 8) {
             //Eingabe Preis vom Medikament
-            int again = 1;
+            double again = 1;
             double Preis;
             //Loop wiederholungen
             while (again == 1) {
@@ -32,10 +33,9 @@ int main() {
                 cout << "Noch eine Berechnung?      Ja(1)   Nein(2)\n";
                 cin >> again;
             }
-            return 69;
         } else if (Aufgabe == 9) {
             //Eingabe Wert 1 & 2
-            int Wert1, Wert2, again = 1;
+            double Wert1, Wert2, again = 1;
             //Loop wiederholungen
             while (again == 1) {
                 cout << "Geben Sie Wert 1 ein: ";
@@ -48,9 +48,8 @@ int main() {
                 cout << "\n\n\nNochmal?   Ja(1)   Nein(2)\n";
                 cin >> again;
             }
-            return 420;
         } else if (Aufgabe == 10) {
-            int again = 1;
+            double again = 1;
             double Nettopreis;
             string Leistungsart;
             //Loop wiederholungen
@@ -66,9 +65,9 @@ int main() {
                 cout << "\n\n\nNochmal?   Ja(1)   Nein(2)\n";
                 cin >> again;
             }
-            return 69420;
         }
         cout << "Möchtest du eine andere Aufgabe berechnen?     Ja(1)   Nein(2)\n";
+        Aufgabe = 0;
         cin >> again1;
     }
 }
